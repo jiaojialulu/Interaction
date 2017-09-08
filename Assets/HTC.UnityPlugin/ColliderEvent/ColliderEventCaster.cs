@@ -16,6 +16,9 @@ namespace HTC.UnityPlugin.ColliderEvent
         Rigidbody rigid { get; }
     }
 
+    /// <summary>
+    /// jiao--碰撞事件发送类，需要rigidbody
+    /// </summary>
     [RequireComponent(typeof(Rigidbody))]
     public class ColliderEventCaster : MonoBehaviour, IColliderEventCaster
     {

@@ -4,17 +4,33 @@ using HTC.UnityPlugin.Utility;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+
+// jiao--碰撞事件
 namespace HTC.UnityPlugin.ColliderEvent
 {
     public static class ColliderEventDataExtension
     {
+        /// <summary>
+        /// jiao--获取事件的Caster
+        /// </summary>
+        /// <typeparam name="TEventCaster"></typeparam>
+        /// <param name="eventData"></param>
+        /// <returns></returns>
         public static TEventCaster GetEventCaster<TEventCaster>(this ColliderEventData eventData) where TEventCaster : MonoBehaviour, IColliderEventCaster
         {
             if (!(eventData.eventCaster is TEventCaster)) { return null; }
 
             return eventData.eventCaster as TEventCaster;
         }
-
+        
+        /// <summary>
+        /// jiao--上一个函数的第二种写法，Try表示返回一个bool表示是否成功，而真正要的其实是输入参数中的eventCaster
+        /// </summary>
+        /// <typeparam name="TEventCaster"></typeparam>
+        /// <param name="eventData"></param>
+        /// <param name="eventCaster"></param>
+        /// <returns></returns>
         public static bool TryGetEventCaster<TEventCaster>(this ColliderEventData eventData, out TEventCaster eventCaster) where TEventCaster : MonoBehaviour, IColliderEventCaster
         {
             eventCaster = null;
@@ -26,9 +42,12 @@ namespace HTC.UnityPlugin.ColliderEvent
         }
     }
 
+    /// <summary>
+    /// jiao--继承自BaseEventData的碰撞EventData
+    /// </summary>
     public class ColliderEventData : BaseEventData
     {
-        public readonly IColliderEventCaster eventCaster;
+        public readonly IColliderEventCaster eventCaster;                           //jiao--data的Caster
 
         public ColliderEventData(IColliderEventCaster eventCaster) : base(null)
         {
@@ -36,11 +55,14 @@ namespace HTC.UnityPlugin.ColliderEvent
         }
     }
 
-    public class ColliderHoverEventData : ColliderEventData
+    public class ColliderHoverEventData : ColliderEventData                         //jiao--hover表示盘旋，感觉是在物体内部时的意思？
     {
         public ColliderHoverEventData(IColliderEventCaster eventCaster) : base(eventCaster) { }
     }
 
+    /// <summary>
+    /// jiao--在碰撞的情况下按下按钮的数据，包括是谁安得，按下的pos和rot
+    /// </summary>
     public abstract class ColliderButtonEventData : ColliderEventData
     {
         public enum InputButton

@@ -16,12 +16,10 @@ public class MotionSingle : MonoBehaviour {
     public string PartInfo;// 部件信息
 
     private Vector3 MovedPos;
-    private Transform OriginPos;
-    private bool bLocked;
     private bool bIsRotate = false;
-    public bool bIsDrag = false;
-    public bool bIsSelected = false;
-    private Transform tracker;
+    protected bool bIsDrag = false;
+    protected bool bIsSelected = false;
+    protected Transform tracker;
     protected Pose transformation;
 
     public virtual void ShowInfo()
@@ -72,12 +70,13 @@ public class MotionSingle : MonoBehaviour {
         HOTween.To(this.transform, 0.5f, parms);
     }
 
-    public void Reset()
+    public virtual void Reset()
     {
         TweenParms parms = new TweenParms();
         //移动
-        parms.Prop("position", new Vector3(0, 0, 0));
-        parms.Prop("rotation", new Vector3(0, 0, 0));
+
+        parms.Prop("position", GameObject.Find("Machine").GetComponent<Transform>().position);
+        parms.Prop("rotation", GameObject.Find("Machine").GetComponent<Transform>().rotation);
         parms.Prop("localScale", new Vector3(1, 1, 1));
         //运动的类型
         parms.Ease(EaseType.EaseInOutCirc);
@@ -89,7 +88,6 @@ public class MotionSingle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        OriginPos = this.transform;
         Collider box;
         if(!(box = GetComponent<BoxCollider>()))
             if (!(box = GetComponent<CapsuleCollider>()))
@@ -133,7 +131,7 @@ public class MotionSingle : MonoBehaviour {
 
 
 	// Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if (bIsDrag && tracker.gameObject.activeSelf)
         {
@@ -145,5 +143,8 @@ public class MotionSingle : MonoBehaviour {
         {
             ShowInfo();
         }
+
+        //if (Input.GetKeyDown(KeyCode.A))
+        //    Reset();
     }
 }

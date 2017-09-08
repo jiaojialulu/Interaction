@@ -30,6 +30,20 @@ public class MyTracker : MonoBehaviour {
     {
         if (colliderObj == null)
             colliderObj = obj;
+        else
+        {
+            if (colliderObj.gameObject.tag == "Tool" && obj.gameObject.tag == "Single")
+            {
+                var scriptSingle = obj.gameObject.GetComponent<MotionSingle>();
+                var scriptTool = colliderObj.gameObject.GetComponent<ToolMotionSingle>();
+                if(scriptSingle&&scriptTool)
+                {
+                    scriptTool.Work(scriptSingle);
+                }
+                colliderObj = null;
+                print("1");
+            }
+        }
     }
 
     void OnTriggerStay(Collider obj)
@@ -40,7 +54,11 @@ public class MyTracker : MonoBehaviour {
     {
         if (obj == colliderObj)
             colliderObj = null;
+        print("2");
+
     }
+
+
 
     void OnCollisionEnter(Collision ctl)
     {
