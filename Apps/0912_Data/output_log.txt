@@ -1,0 +1,61 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro K2200 (ID=0x13ba)
+    Vendor:   NVIDIA
+    VRAM:     3970 MB
+    Driver:   22.21.13.8494
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\HOTween.dll (this message is harmless)
+Loading E:\MRRoom\Interaction\Apps\0912_Data\Managed\HOTween.dll into Unity Child Domain
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\System.dll (this message is harmless)
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.029 seconds
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\System.Xml.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+OpenVR initialized!
+ 
+(Filename:  Line: 584)
+
+[VRDevice] Successfully created device OpenVR.
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\Mono.Security.dll (this message is harmless)
+Platform assembly: E:\MRRoom\Interaction\Apps\0912_Data\Managed\Boo.Lang.dll (this message is harmless)
+UnloadTime: 0.588451 ms
+Setting up 12 worker threads for Enlighten.
+  Thread -> id: 494c -> priority: 1 
+  Thread -> id: 31e0 -> priority: 1 
+  Thread -> id: 181c -> priority: 1 
+  Thread -> id: 1574 -> priority: 1 
+  Thread -> id: 37fc -> priority: 1 
+  Thread -> id: 42ac -> priority: 1 
+  Thread -> id: 3240 -> priority: 1 
+  Thread -> id: 382c -> priority: 1 
+  Thread -> id: 13c8 -> priority: 1 
+  Thread -> id: 5b0 -> priority: 1 
+  Thread -> id: 4be0 -> priority: 1 
+  Thread -> id: 1870 -> priority: 1 
+Connected to lighthouse:LHR-0A1D5BCD
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+OpenVR Shutdown
+ 
+(Filename:  Line: 1253)
+

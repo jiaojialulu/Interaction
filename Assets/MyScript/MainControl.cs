@@ -8,7 +8,7 @@ public class MainControl : MonoBehaviour
     [SerializeField]
     public Transform EngineNode;    //发动机主节点
     [SerializeField]
-    private Transform Engine;        // 发动机
+    private Transform Engine;       // 发动机
     public Transform tracker;       // 追踪器
     public Transform ToolBox;       // 工具箱
 
@@ -82,6 +82,20 @@ public class MainControl : MonoBehaviour
                 EndMove();
             }
         }
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            CallToolBox();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            AllDisassemble();
+        }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            AllUnDisassemble();
+        }
     }
 
     /// <summary>
@@ -100,7 +114,7 @@ public class MainControl : MonoBehaviour
     /// </summary>
     public void ReadXml()
     {
-        XmlDocument xmlDoc = LoadXML(Application.dataPath + "/Machine/Data/Data.xml");
+        XmlDocument xmlDoc = LoadXML(Application.dataPath + "/Resources/Data/Data.xml");
         XmlNode xmlNodes = xmlDoc.SelectSingleNode("Nodes");
         foreach (XmlNode node in xmlNodes)
         {

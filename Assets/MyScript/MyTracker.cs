@@ -41,7 +41,7 @@ public class MyTracker : MonoBehaviour {
                     scriptTool.Work(scriptSingle);
                 }
                 colliderObj = null;
-                print("1");
+
             }
         }
     }
@@ -54,8 +54,6 @@ public class MyTracker : MonoBehaviour {
     {
         if (obj == colliderObj)
             colliderObj = null;
-        print("2");
-
     }
 
 

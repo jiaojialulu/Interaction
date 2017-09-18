@@ -22,6 +22,7 @@ namespace HTC.UnityPlugin.ColliderEvent
     [RequireComponent(typeof(Rigidbody))]
     public class ColliderEventCaster : MonoBehaviour, IColliderEventCaster
     {
+        // jiao-用于记录
         private static HashSet<int> s_gos = new HashSet<int>();
 
         private bool isUpdating;
@@ -121,6 +122,7 @@ namespace HTC.UnityPlugin.ColliderEvent
 
         protected virtual void OnTriggerStay(Collider other)
         {
+            // 相当于set，只有唯一的成员，是用字典实现的
             stayingColliders.AddUnique(other);
         }
 
@@ -132,13 +134,14 @@ namespace HTC.UnityPlugin.ColliderEvent
             var hoveredObjectsPrev = hoveredObjects;
             hoveredObjects = IndexedSetPool<GameObject>.Get();
 
+            // jiao-stayingColliders从OntriggerStay中持续获得，然后遍历其父对象直根部，加入到hoverEnterHandlers中
             for (int i = stayingColliders.Count - 1; i >= 0; --i)
             {
                 var collider = stayingColliders[i];
 
                 if (collider == null) { continue; }
 
-                // travel from collider's gameObject to its root
+                // travel from collider's gameObject to its root遍历collider的gameobject直到根
                 for (var tr = collider.transform; !ReferenceEquals(tr, null); tr = tr.parent)
                 {
                     var go = tr.gameObject;
@@ -157,11 +160,13 @@ namespace HTC.UnityPlugin.ColliderEvent
                 hoverExitHandlers.Add(hoveredObjectsPrev[i]);
             }
 
+            // jiao-objs->handlers，然后再释放掉
             IndexedSetPool<GameObject>.Release(hoveredObjectsPrev);
 
             // process button events
             for (int i = 0, imax = buttonEventDataList.Count; i < imax; ++i)
             {
+                // jiao-需要一个eventData的list和一个handlers的list
                 var eventData = buttonEventDataList[i];
                 var handlers = GetButtonHandlers(i);
 
@@ -245,6 +250,7 @@ namespace HTC.UnityPlugin.ColliderEvent
             isUpdating = false;
         }
 
+        // jiao-写进eventData和handlers信息
         protected void ProcessPressDown(ColliderButtonEventData eventData, ButtonHandlers handlers)
         {
             eventData.isPressed = true;
@@ -355,6 +361,7 @@ namespace HTC.UnityPlugin.ColliderEvent
 
         private ButtonHandlers GetButtonHandlers(int i)
         {
+            // jiao-相当于初始化？先添加为null，输出时new
             while (i >= buttonEventHandlerList.Count) { buttonEventHandlerList.Add(null); }
             return buttonEventHandlerList[i] ?? (buttonEventHandlerList[i] = new ButtonHandlers());
         }
@@ -365,6 +372,12 @@ namespace HTC.UnityPlugin.ColliderEvent
             return axisEventHanderList[i] ?? (axisEventHanderList[i] = new AxisHandlers());
         }
 
+
+        /// <summary>
+        /// jiao--从Colliders中获取handlers
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="appendHandlers"></param>
         private void GetEventHandlersFromHoveredColliders<T>(params IList<GameObject>[] appendHandlers) where T : IEventSystemHandler
         {
             for (int i = stayingColliders.Count - 1; i >= 0; --i)

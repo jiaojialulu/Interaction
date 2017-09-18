@@ -71,4 +71,6 @@ namespace HTC.UnityPlugin.Vive
             axisEventDataList.Add(new ViveColliderTriggerAxisEventData(this));
         }
     }
+
+    
 }

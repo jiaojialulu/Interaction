@@ -68,4 +68,10 @@ namespace HTC.UnityPlugin.ColliderEvent
     {
         void OnColliderEventAxisChanged(ColliderAxisEventData eventData);
     }
+    
+    // jiao
+    public interface IColliderEventJiaoHandler : IEventSystemHandler
+    {
+        void OnColliderEventJiao(WristBand.JiaoEventData eventData);
+    }
 }

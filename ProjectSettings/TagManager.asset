@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tool
   - Single
+  - Tracker
   layers:
   - Default
   - TransparentFX

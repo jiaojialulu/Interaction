@@ -117,6 +117,7 @@ namespace HTC.UnityPlugin.Vive
                 ViveInput.onUpdate += OnInputStateUpdated;
                 m_updateActivated = true;
                 ViveInput.Initialize();
+                print("sd");
             }
         }
 

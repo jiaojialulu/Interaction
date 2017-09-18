@@ -59,8 +59,8 @@ public class MotionSingle : MonoBehaviour {
     {
         TweenParms parms = new TweenParms();
         //移动
-        parms.Prop("position", MovedPos);
-        parms.Prop("rotation", new Vector3(0, 0, 0));
+        parms.Prop("localPosition", MovedPos);
+        parms.Prop("localRotation", new Vector3(0, 0, 0));
         parms.Prop("localScale", new Vector3(1, 1, 1));
         //运动的类型
         parms.Ease(EaseType.EaseInOutCirc);
@@ -75,8 +75,8 @@ public class MotionSingle : MonoBehaviour {
         TweenParms parms = new TweenParms();
         //移动
 
-        parms.Prop("position", GameObject.Find("Machine").GetComponent<Transform>().position);
-        parms.Prop("rotation", GameObject.Find("Machine").GetComponent<Transform>().rotation);
+        parms.Prop("localPosition", new Vector3(0, 0, 0));
+        parms.Prop("localRotation", new Vector3(0, 0, 0));
         parms.Prop("localScale", new Vector3(1, 1, 1));
         //运动的类型
         parms.Ease(EaseType.EaseInOutCirc);

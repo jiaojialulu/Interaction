@@ -15,7 +15,7 @@ public class ToolMotionSingle : MotionSingle
         tracker = GameObject.Find("RightHand").GetComponent<Transform>();
         oriPosition = transform.localPosition;
         oriParentTransform = GetComponentInParent<Transform>();
-        oriRotation = transform.rotation;
+        oriRotation = transform.localRotation;
 	}
     public override void ShowInfo()
     {
@@ -24,12 +24,12 @@ public class ToolMotionSingle : MotionSingle
     public override void Reset()
     {
         this.transform.localPosition = oriPosition;
-        this.transform.rotation = oriRotation;
+        this.transform.localRotation = oriRotation;
     }
 
     IEnumerator PlayOrStopAnimation(float time)
     {
-        var ani = GetComponent<Animator>();
+        var ani = GetComponentInChildren<Animator>();
         if(ani == null)
         {
             Debug.LogError("Can't Find Animator!");
@@ -58,8 +58,8 @@ public class ToolMotionSingle : MotionSingle
 
     public void Work(MotionSingle single)
     {
-        print("我是个工具");
-        StartCoroutine(PlayOrStopAnimation(1.0f));
+
+        StartCoroutine(PlayOrStopAnimation(2.0f));
         single.Reset();
         //StartCoroutine(PlayOrStopAnimation(0));
         bIsSelected = false;
@@ -102,6 +102,6 @@ public class ToolMotionSingle : MotionSingle
         base.Update();
 
         if (Input.GetKeyDown(KeyCode.A))
-            StartCoroutine(PlayOrStopAnimation(1));
+            Reset();
 	}
 }

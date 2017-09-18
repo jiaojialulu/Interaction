@@ -84,11 +84,11 @@
     <Compile Include="Assets\Plugins\HighlightingSystem\Scripts\HighlightableObject.cs" />
     <Compile Include="Assets\Plugins\HighlightingSystem\Scripts\HighlightingEffect.cs" />
     <Compile Include="Assets\Plugins\openvr_api.cs" />
+    <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\Resources\Unlit-AlphaWithFade.shader" />
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\changelog.txt" />
-    <None Include="Assets\Machine\Data\Data.xml" />
     <None Include="Assets\Machine\HOTween\HOTween.XML" />
     <None Include="Assets\Machine\HOTween\HOTween_License.txt" />
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingBlur.shader" />
@@ -98,6 +98,7 @@
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingStencilOpaqueZ.shader" />
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingStencilTransparent.shader" />
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingStencilTransparentZ.shader" />
+    <None Include="Assets\Resources\Data\Data.xml" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />

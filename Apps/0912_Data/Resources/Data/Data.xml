@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Nodes>
+	<node id="1" name="叶轮" step="1" sroce="5" pos="0.8,0,0" rot="0,0,0" scale="1,1,1"  pic="1" info ="叶轮既指装有动叶的轮盘，是冲动式汽轮机转子的组成部分，又可以指轮盘与安装其上的转动叶片的总称。"/>
+  <node id="2" name="轮轴" step="2" sroce="5" pos="0.75,0,0" rot="0,0,0" scale="1,1,1" pic="2" info ="轮轴，顾名思义是由“轮”和“轴”组成的系统。该系统能绕共轴线旋转，相当于以轴心为支点，半径为杆的杠杆系统。所以，轮轴能够改变扭力的力矩，从而达到改变扭力的大小。"/>
+  <node id="3" name="过滤芯" step="3" sroce="5" pos="-0.7,0,0" rot="0,0,0" scale="1,1,1" pic="3" info ="过滤芯是一种过滤设备，是过滤器的核心部件。"/>
+  <node id="4" name="连接点" step="4" sroce="5" pos="-0.7,0,0" rot="0,0,0" scale="1,1,1" pic="4" info ="连接点"/>
+  <node id="5" name="排气管" step="5" sroce="5" pos="0,0,0.7" rot="0,0,0" scale="1,1,1" pic="5" info ="排气管是发动机排气系统的一部分，排气系统主要包括排气歧管、排气管和消音器，一般为控制发动机污染物排放的三校催化器也安装在排气系统中，排气管一般包括前排气管和后排气管。"/>
+  <node id="6" name="油泵" step="6" sroce="5" pos="0,0,-0.7" rot="0,0,0" scale="1,1,1"  pic="6" info ="油泵是一种既轻便又紧凑的泵，有直列式、分配式和单体式三大类。油泵要有动力源才能运转，它下部的凸轮轴是由发动机曲轴齿轮带动的。"/>
+  <node id="7" name="喷油总成" step="7" sroce="5" pos="0,0,-0.7" rot="0,0,0" scale="1,1,1"  pic="7" info ="喷油泵试验台用标准喷油器总成是试验台的关键部件，它主要用于柴油机喷油泵总成的试验和调整，其精度直接影响喷油泵的供油性能，最终影响柴油机的动力性和经济性。"/>
+  <node id="8" name="传动器" step="8" sroce="5" pos="0,0,-0.7" rot="0,0,0" scale="1,1,1"  pic="8" info ="其功用是在轴线相交且相对位置经常变化的两转轴之间可靠地传递动力。"/>
+  <node id="9" name="传动总成" step="9" sroce="5" pos="0.5,0,0" rot="0,0,0" scale="1,1,1"  pic="9" info ="传动总成"/>
+  <node id="10" name="油泵" step="10" sroce="5" pos="0,0,0.7" rot="0,0,0" scale="1,1,1"  pic="10" info ="油泵"/>
+  <node id="11" name="机盖" step="11" sroce="5" pos="0,0.7,0" rot="0,0,0" scale="1,1,1"  pic="11" info ="机盖"/>
+  <node id="12" name="引擎盖" step="12" sroce="5" pos="0,0.5,0" rot="0,0,0" scale="1,1,1"  pic="12" info =" 引擎盖"/>
+  <node id="13" name="引擎盖2" step="13" sroce="5" pos="0,0.4,-0.4" rot="0,0,0" scale="1,1,1"  pic="13" info ="引擎盖2"/>
+  <node id="14" name="活塞总成" step="14" sroce="5" pos="0,0.5,0.3" rot="0,0,0" scale="1,1,1"  pic="14" info ="活塞总成"/>
+  <node id="15" name="过滤器" step="15" sroce="5" pos="0,0,-0.4" rot="0,0,0" scale="1,1,1"  pic="15" info ="过滤器"/>
+  <node id="16" name="喷油泵" step="16" sroce="5" pos="-0.4,0,-0.8" rot="0,0,0" scale="1,1,1"  pic="16" info ="喷油泵总成通常是由喷油泵、调速器等部件安装在一起组成的一个整体。其中调速器是保障柴油机的低速运转和对最高转速的限制，确保喷射量与转速之间保持一定关系的部件。"/>
+  <node id="17" name="联动器" step="17" sroce="5" pos="0,0,-0.3" rot="0,0,0" scale="1,1,1"  pic="17" info ="联动器"/>
+  <node id="18" name="打火器" step="18" sroce="5" pos="0,0.2,-0.3" rot="0,0,0" scale="1,1,1"  pic="18" info ="指能在一瞬间提供足够的能量点燃煤粉、油（气）燃料并能稳定火焰的装置。"/>
+  <node id="19" name="固定器" step="19" sroce="5" pos="0,0,0.5" rot="0,0,0" scale="1,1,1"  pic="19" info ="固定器"/>
+  <node id="20" name="固定点" step="20" sroce="5" pos="-0.4,0,-0.2" rot="0,0,0" scale="1,1,1"  pic="20" info ="固定点"/>
+  <node id="21" name="火花塞" step="21" sroce="5" pos="0,0.1,0.4" rot="0,0,0" scale="1,1,1"  pic="21" info ="汽油机点火系统中将高压电流引入气缸产生电火花，以点燃可燃混合气体的部件。"/>
+</Nodes>

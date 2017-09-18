@@ -161,6 +161,9 @@ namespace HTC.UnityPlugin.Vive
         public override bool GetPressUp() { return ViveInput.GetPressUpEx(viveRole.roleType, viveRole.roleValue, viveButton); }
     }
 
+    
+
+
     public class ViveColliderTriggerAxisEventData : ColliderAxisEventData
     {
         public ViveColliderEventCaster viveEventCaster { get; private set; }

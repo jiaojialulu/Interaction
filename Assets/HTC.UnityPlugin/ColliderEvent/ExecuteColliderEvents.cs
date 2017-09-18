@@ -83,5 +83,12 @@ namespace HTC.UnityPlugin.ColliderEvent
         {
             handler.OnColliderEventAxisChanged(ExecuteEvents.ValidateEventData<ColliderAxisEventData>(eventData));
         }
+
+        // jiao 
+        public static readonly ExecuteEvents.EventFunction<IColliderEventJiaoHandler> JiaoHandler = Execute;
+        private static void Execute(IColliderEventJiaoHandler handler, BaseEventData eventData)
+        {
+            handler.OnColliderEventJiao(ExecuteEvents.ValidateEventData<WristBand.JiaoEventData>(eventData));
+        }
     }
 }

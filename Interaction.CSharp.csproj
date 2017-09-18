@@ -79,6 +79,9 @@
     <Reference Include="HOTween">
       <HintPath>Assets\Machine\HOTween\HOTween.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Interaction.CSharp.Plugins.csproj">
@@ -207,9 +210,18 @@
     <Compile Include="Assets\MyScript\Globe.cs" />
     <Compile Include="Assets\MyScript\MainControl.cs" />
     <Compile Include="Assets\MyScript\MotionSingle.cs" />
-    <Compile Include="Assets\MyScript\MyDragable.cs" />
     <Compile Include="Assets\MyScript\MyTracker.cs" />
     <Compile Include="Assets\MyScript\ToolMotionSingle.cs" />
+    <Compile Include="Assets\MyScript\UseClass\GlobalControl.cs" />
+    <Compile Include="Assets\MyScript\UseClass\MyAnimationCaster.cs" />
+    <Compile Include="Assets\MyScript\UseClass\MyGrabble.cs" />
+    <Compile Include="Assets\MyScript\UseClass\MyMaterialChanger.cs" />
+    <Compile Include="Assets\MyScript\UseClass\MySingleGrabble.cs" />
+    <Compile Include="Assets\MyScript\UseClass\MyToolGrabble.cs" />
+    <Compile Include="Assets\MyScript\UseClass\MyTrackerColliderButtonEventData.cs" />
+    <Compile Include="Assets\MyScript\UseClass\MyTrackerColliderEventCaster.cs" />
+    <Compile Include="Assets\MyScript\UseClass\ToolControl.cs" />
+    <Compile Include="Assets\MyScript\UseClass\WristBandInput.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -316,7 +328,6 @@
   <ItemGroup>
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\Resources\Unlit-AlphaWithFade.shader" />
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\changelog.txt" />
-    <None Include="Assets\Machine\Data\Data.xml" />
     <None Include="Assets\Machine\HOTween\HOTween.XML" />
     <None Include="Assets\Machine\HOTween\HOTween_License.txt" />
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingBlur.shader" />
@@ -326,6 +337,7 @@
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingStencilOpaqueZ.shader" />
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingStencilTransparent.shader" />
     <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingStencilTransparentZ.shader" />
+    <None Include="Assets\Resources\Data\Data.xml" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
